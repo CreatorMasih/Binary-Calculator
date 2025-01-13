@@ -1,0 +1,195 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    text-transform: uppercase;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  h2, h3 {
+    margin-bottom: 15px;
+    color: #4CAF50;
+    font-size: 1.5rem;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+  }
+  
+  input, select {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    border: 1px solid #444;
+  }
+  
+  input:focus, select:focus {
+    border-color: #4CAF50;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  .calc-button {
+    background-color: #3e8e41;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #aaaaaa;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* Instruction box */
+  .instruction-box {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .instruction-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Result display */
+  .result-display {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #4CAF50;
+  }
+  
+ /* Toggle instructions button */
+.toggle-instructions {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px; /* Reduced padding for a smaller button */
+    border: none;
+    border-radius: 5px; /* Slightly rounded for a modern look */
+    font-size: 0.9em; /* Adjusted font size for balance */
+    font-weight: bold; /* Makes the text stand out */
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .toggle-instructions:hover {
+    background-color: #45a049;
+    transform: scale(1.03); /* Subtle scaling effect */
+  }
+  
+  .toggle-instructions:active {
+    transform: scale(0.97); /* Visual feedback on click */
+  }
+  
+  
+  /* Loading spinner */
+  .loading {
+    text-align: center;
+    font-size: 1.2em;
+    color: #4CAF50;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    input, select, button {
+      font-size: 0.9em;
+    }
+  
+    footer p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 95%;
+    }
+  
+    h2, h3 {
+      font-size: 1.2rem;
+    }
+  
+    input, select, button {
+      font-size: 0.8em;
+    }
+  }
+  

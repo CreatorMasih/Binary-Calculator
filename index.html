@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Futuristic Number System Calculator</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body class="dark-mode">
+     <header>
+         <h1>Number System Calculator</h1>
+     </header>
+     <div class="container">
+         <button class="toggle-instructions" onclick="toggleInstructions()">Toggle Instructions</button>
+         <div class="instructions" id="instructions" style="display: none;">
+             <div class="instruction-box">
+                 <h3>Single Number Conversion</h3>
+                 <p>
+                     - Enter a number in the input field.<br>
+                     - Select the base of the input number from the first dropdown.<br>
+                     - Select the desired output number system from the second dropdown.<br>
+                     - Click the "Convert" button to see the converted result.
+                 </p>
+             </div>
+             <div class="instruction-box">
+                 <h3>Arithmetic Operations</h3>
+                 <p>
+                     - Enter the first number in the input field and select its base from the dropdown.<br>
+                     - Enter the second number in the next input field and select its base from the dropdown.<br>
+                     - Select the arithmetic operation from the dropdown.<br>
+                     - Select the desired output number system from the dropdown.<br>
+                     - Click the "Calculate" button to see the result.<br>
+                     - Click the "C" button to clear all inputs and the result.
+                 </p>
+             </div>
+         </div>
+         <div id="result" class="result-display"></div>
+         <div class="calculator">
+             <h2>Single Number Conversion</h2>
+             <input type="text" id="singleInput" placeholder="Enter number">
+             <select id="singleInputType">
+                 <option value="decimal">Decimal</option>
+                 <option value="binary">Binary</option>
+                 <option value="octal">Octal</option>
+                 <option value="hexadecimal">Hexadecimal</option>
+             </select>
+             <select id="singleResultType">
+                 <option value="decimal">Decimal</option>
+                 <option value="binary">Binary</option>
+                 <option value="octal">Octal</option>
+                 <option value="hexadecimal">Hexadecimal</option>
+             </select>
+             <button class="calc-button" onclick="convertSingleNumber()">Convert</button>
+ 
+             <h2>Arithmetic Operations</h2>
+             
+             <input type="text" id="input1" placeholder="Enter first number">
+             <select id="input1Type">
+                 <option value="decimal">Decimal</option>
+                 <option value="binary">Binary</option>
+                 <option value="octal">Octal</option>
+                 <option value="hexadecimal">Hexadecimal</option>
+             </select>
+             <input type="text" id="input2" placeholder="Enter second number">
+             <select id="input2Type">
+                 <option value="decimal">Decimal</option>
+                 <option value="binary">Binary</option>
+                 <option value="octal">Octal</option>
+                 <option value="hexadecimal">Hexadecimal</option>
+             </select>
+             <select id="arithmeticType">
+                 <option value="+">+</option>
+                 <option value="-">-</option>
+                 <option value="*">*</option>
+                 <option value="/">/</option>
+             </select>
+             <select id="resultType">
+                 <option value="decimal">Decimal</option>
+                 <option value="binary">Binary</option>
+                 <option value="octal">Octal</option>
+                 <option value="hexadecimal">Hexadecimal</option>
+             </select>
+             <button class="calc-button" onclick="performOperation()">Calculate</button>
+             <button class="calc-button" onclick="clearInput()">Clear</button>
+             <div id="loading" class="loading" style="display: none;">Calculating...</div>
+         </div>
+     </div>
+     <footer>
+         <p>©Pratik 2024 Futuristic Calculator. All rights reserved.</p>
+     </footer>
+     <script src="calculator.js"></script>
+ </body>
+ </html>
